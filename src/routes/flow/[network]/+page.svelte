@@ -66,32 +66,38 @@
 
 		<hr class="my-3" />
 
-		<Metadata
-			label="Details"
-			list={[
-				{ label: 'code', value: selectedFlow.code },
-				{ label: 'data_type', value: selectedFlow.data_type },
-				{ label: 'units', value: selectedFlow.units }
-			]}
-		/>
+		{#if selectedFlow}
+			<Metadata
+				label="Details"
+				list={[
+					{ label: 'code', value: selectedFlow.code },
+					{ label: 'data_type', value: selectedFlow.data_type },
+					{ label: 'units', value: selectedFlow.units }
+				]}
+			/>
 
-		<hr class="my-3" />
+			<hr class="my-3" />
 
-		<Metadata
-			label="History"
-			list={[
-				{ label: 'start', value: selectedFlow.history.start },
-				{ label: 'last', value: selectedFlow.history.last },
-				{ label: 'interval', value: selectedFlow.history.interval }
-			]}
-		/>
+			<Metadata
+				label="History"
+				list={[
+					{ label: 'start', value: selectedFlow.history.start },
+					{ label: 'last', value: selectedFlow.history.last },
+					{ label: 'interval', value: selectedFlow.history.interval }
+				]}
+			/>
+		{/if}
 	</div>
 
 	<div class="h-[400px] w-2/3 overflow-y-auto border border-stone-300 rounded shadow-inner">
-		<Table {tableData} />
+		{#if selectedFlow}
+			<Table {tableData} />
+		{/if}
 	</div>
 </div>
 
 <div class="w-full h-[400px] border rounded my-2 border-stone-300 shadow-inner">
-	<Chart {chartData} {chartLabels} label={selectedFlow.code} />
+	{#if selectedFlow}
+		<Chart {chartData} {chartLabels} label={selectedFlow.code} />
+	{/if}
 </div>
