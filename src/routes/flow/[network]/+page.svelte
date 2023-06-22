@@ -1,6 +1,6 @@
 <script>
-	import parseISO from 'date-fns/parseISO';
-	import addMinutes from 'date-fns/addMinutes';
+	import parseISO from 'date-fns/parseISO/index.js';
+	import addMinutes from 'date-fns/addMinutes/index.js';
 
 	import Select from '$lib/components/form/select.svelte';
 	import Chart from '$lib/components/vis/chart.svelte';
