@@ -8,3 +8,10 @@ export async function load({ params }) {
 		status: res.status
 	};
 }
+
+/** @type {import('./$types').EntryGenerator} */
+export function entries() {
+	return [{ network: 'nem' }];
+}
+
+export const prerender = true;
