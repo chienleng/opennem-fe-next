@@ -1,0 +1,11 @@
+@import '/fonts/dm-sans/style.css';
+@import '/fonts/dm-serif-display/style.css';
+@import '/fonts/dm-mono/style.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	@apply bg-stone-100 h-screen;
+}

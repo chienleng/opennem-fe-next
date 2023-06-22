@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'DM Mono';
+	font-style: normal;
+	font-weight: normal;
+	src: url('/fonts/dm-mono/DMMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DM Mono';
+	font-style: italic;
+	font-weight: normal;
+	src: url('/fonts/dm-mono/DMMono-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DM Mono';
+	font-style: normal;
+	font-weight: 200;
+	src: url('/fonts/dm-mono/DMMono-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DM Mono';
+	font-style: italic;
+	font-weight: 200;
+	src: url('/fonts/dm-mono/DMMono-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DM Mono';
+	font-style: normal;
+	font-weight: 600;
+	src: url('/fonts/dm-mono/DMMono-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DM Mono';
+	font-style: italic;
+	font-weight: 600;
+	src: url('/fonts/dm-mono/DMMono-MediumItalic.ttf') format('truetype');
+}
