@@ -1,5 +1,6 @@
 <script>
 	export let label = '';
+	/** @type {{ label: string, value: string | string }[]} */
 	export let list = [];
 </script>
 

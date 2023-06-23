@@ -4,17 +4,21 @@
 
 	import Select from '$lib/components/form/select.svelte';
 	import Chart from '$lib/components/vis/chart.svelte';
+	import SimpleDataTable from '$lib/components/table/simple-data-table.svelte';
 
 	import Metadata from './metadata.svelte';
-	import Table from './table.svelte';
 
 	export let data;
 
 	let version = data.response.version;
+	/** @type {import('$lib/types/opennem-response.types.js').OpenNemData[]} */
 	let flowData = data.response.data;
 	let selected = '';
+	/** @type {import('$lib/components/table/row.types.js').SimpleDataTableRow[]} */
 	let tableData = [];
+	/** @type {number[]} */
 	let chartData = [];
+	/** @type {number[]} */
 	let chartLabels = [];
 
 	$: flowOptions = flowData.map((flow) => flow.code);
@@ -91,7 +95,7 @@
 
 	<div class="h-[400px] w-2/3 overflow-y-auto border border-stone-300 rounded shadow-inner">
 		{#if selectedFlow}
-			<Table {tableData} />
+			<SimpleDataTable {tableData} />
 		{/if}
 	</div>
 </div>
